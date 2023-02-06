@@ -8,6 +8,6 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/bookmark_item"></androidx.recyclerview.widget.RecyclerView>
+        tools:listitem="@layout/bookmark_item"/>
 
 </FrameLayout>
