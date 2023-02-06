@@ -57,55 +57,23 @@
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="8dp"
                 android:text="9/10 Ratings"
-                app:layout_constraintStart_toEndOf="@+id/img3"
+                app:layout_constraintStart_toEndOf="@+id/star_icon"
                 app:layout_constraintTop_toBottomOf="@+id/bookmark_movie_item_name" />
 
-            <LinearLayout
-                android:id="@+id/movie_genres"
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/movie_genres_recyclerVIew"
+                android:padding="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                android:background="#fefefe"
                 android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/genres_item"
                 app:layout_constraintStart_toEndOf="@+id/bookmark_item_image"
-                app:layout_constraintTop_toBottomOf="@+id/bookmark_item_rating">
-
-                <TextView
-                    android:id="@+id/bookmark_item_genre1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:text="Action"
-                    android:textSize="12sp"
-                    android:padding="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/genre_background"
-                    android:layout_margin="7dp"
-                    />
-
-                <TextView
-                    android:id="@+id/bookmark_item_genre2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Action"
-                    android:textSize="12sp"
-                    android:layout_weight="1"
-                    android:padding="5dp"
-                    android:background="@drawable/genre_background"
-                    android:layout_margin="7dp" />
-
-                <TextView
-                    android:id="@+id/bookmark_item_genre3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Action"
-                    android:textSize="12sp"
-                    android:layout_weight="1"
-                    android:padding="5dp"
-                    android:background="@drawable/genre_background"
-                    android:layout_margin="7dp"/>
-
-            </LinearLayout>
-
-
+                app:layout_constraintTop_toBottomOf="@+id/bookmark_item_rating"
+                />
 
             <TextView
                 android:id="@+id/bookmark_item_duration"
@@ -117,9 +85,10 @@
                 android:textColor="@color/black"
                 android:textSize="10sp"
                 app:layout_constraintStart_toEndOf="@+id/bookmark_item_image"
-                app:layout_constraintTop_toBottomOf="@+id/movie_genres" />
+                app:layout_constraintTop_toBottomOf="@+id/movie_genres_recyclerVIew" />
 
             <ImageView
+                android:id="@+id/star_icon"
                 android:layout_width="10dp"
                 android:layout_marginLeft="5dp"
                 android:layout_height="wrap_content"
