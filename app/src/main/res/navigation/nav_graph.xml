@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/id_home_fragment"
-        android:name="com.example.myapplication.HomeFragment"
+        android:name="com.example.myapplication.Home.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/id_bookmark_fragment"
-        android:name="com.example.myapplication.BookmarkFragment"
+        android:name="com.example.myapplication.Bookmark.BookmarkFragment"
         android:label="Bookmark"
         tools:layout="@layout/fragment_bookmark" />
     <fragment
